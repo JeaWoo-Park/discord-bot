@@ -30,6 +30,8 @@ async def 도움(ctx):
     embed = discord.Embed(title="칼바람", description="by Korus 문제 있을 시 간부에게",color=0xFFFF00)
     embed.add_field(name="챔피언 뽑기",value="!roll [인원X3]",inline=False)
     embed.add_field(name="등록 챔피언 확인",value="!who \n *업데이트 안되어 있으면 간부한테 말해주세요*",inline=False)
+    embed.add_field(name="팀 자동 배정",value="!teamnow\n 현재 채널의 인원으로 팀을 나눕니다.",inline=False)
+    embed.add_field(name="팀 수동 배정",value="!team [A,B,C....]\n 명령어 뒤에 적은 인원들로 팀을 나눕니다.",inline=False)
     await ctx.send(embed=embed)
 
 @bot.command()
