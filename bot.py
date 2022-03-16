@@ -5,7 +5,7 @@ from discord.ext import commands
 game = discord.Game("칼바람")
 bot = commands.Bot(command_prefix='!', status=discord.Status.online, activity=game)
 file = open("champion_list.txt",'r',encoding='cp949')
-chamd = file.read().splitlines()
+champ = file.read().splitlines()
 file.close()
 #cham = ['가렌','그라가스','갈리오']
 
