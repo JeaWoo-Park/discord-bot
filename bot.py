@@ -66,9 +66,6 @@ async def team(ctx,str):
     
 @bot.command()
 async def teamnow(ctx):
-    
-    #member = ctx.channel.name
-    print(ctx.author.voice)
     cnt = len(ctx.message.author.voice.channel.members)
     member_info = str(ctx.message.author.voice.channel.members).split("'")
     member = []
