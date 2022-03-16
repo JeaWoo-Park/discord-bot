@@ -61,6 +61,7 @@ async def remove(ctx,*,str):
 @bot.command()
 async def team(ctx,str):
     people = str.split(",")
+    random.shuffle(people)
     team1 = people[:int(len(people)/2)]
     team2 = people[int(len(people)/2):]
     await ctx.send(f'{team1}')
