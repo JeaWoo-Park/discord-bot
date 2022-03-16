@@ -37,7 +37,7 @@ async def add(ctx,*,str):
     if ctx.guild:
         if ctx.message.author.guild_permissions.manage_messages:
             cham.append(str)
-            file = open("champion_list.txt",'w')
+            file = open("champion_list.txt",'w',encoding='cp949')
             file.writelines('\n'.join(cham))
             file.close()
             await ctx.send(f"{str} 추가")
@@ -49,7 +49,7 @@ async def remove(ctx,*,str):
     if ctx.guild:
         if ctx.message.author.guild_permissions.manage_messages:
             cham.remove(str)
-            file = open("champion_list.txt",'w')
+            file = open("champion_list.txt",'w',encoding='cp949')
             file.writelines('\n'.join(cham))
             file.close()
             await ctx.send(f"{str} 삭제")
