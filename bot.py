@@ -7,7 +7,7 @@ bot = commands.Bot(command_prefix='!', status=discord.Status.online, activity=ga
 
 file = open("champion_list.txt",'r')
 cham = file.read().splitlines()
-
+file.close()
 
 
 
