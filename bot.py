@@ -7,7 +7,7 @@ bot = commands.Bot(command_prefix='!', status=discord.Status.online, activity=ga
 file = open("champion_list.txt",'r')
 cham = file.read().splitlines()
 file.close()
-cham = ['가렌','그라가스','갈리오']
+#cham = ['가렌','그라가스','갈리오']
 
 
 
