@@ -4,7 +4,6 @@ from discord.ext import commands
 
 game = discord.Game("칼바람")
 bot = commands.Bot(command_prefix='!', status=discord.Status.online, activity=game)
-client = discord.Client()
 #file = open("champion_list.txt",'r')
 #cham = file.read().splitlines()
 #file.close()
@@ -84,4 +83,4 @@ async def teamnow(ctx):
     await ctx.send(f"2팀 {team2}")
 
 #access_token = os.environ["BOT_TOKEN"]
-client.run('OTUzMzI2NDEyNTAzMzIyNzE0.YjC8aA.ghWGYzs5eC1-NWjTDbHAIoyRHY0)  #봇의 토큰값
+bot.run('OTUzMzI2NDEyNTAzMzIyNzE0.YjC8aA.ghWGYzs5eC1-NWjTDbHAIoyRHY0')  #봇의 토큰값
