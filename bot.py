@@ -84,4 +84,4 @@ async def teamnow(ctx):
     await ctx.send(f"2팀 {team2}")
 
 access_token = os.environ["BOT_TOKEN"]
-bot.run('OTUzMzI2NDEyNTAzMzIyNzE0.YjC8aA.EjkQzd-eUrC4hrqWplEYexGUhes')  #봇의 토큰값
+bot.run('OTUzMzI2NDEyNTAzMzIyNzE0.YjC8aA.ghWGYzs5eC1-NWjTDbHAIoyRHY0')  #봇의 토큰값
