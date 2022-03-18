@@ -22,6 +22,8 @@ async def roll(ctx, num:int):
     randcham = random.sample(cham,num*2)
     team1 = randcham[:num]
     team2 = randcham[num:]
+    team1.sort()
+    team2.sort()
     await ctx.send(f"1팀\n||{team1}||")
     await ctx.send(f"2팀\n||{team2}||")
 
