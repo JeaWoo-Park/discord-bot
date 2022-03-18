@@ -75,7 +75,8 @@ async def teamnow(ctx):
     member_info = str(ctx.message.author.voice.channel.members).split("'")
     member = []
     for i in range(cnt):
-        member.append(member_info[i*8+5])
+        i = i*8+5
+        member.append(member_info[i])
     
     random.shuffle(member)
     team1 = member[:int(cnt/2)]
