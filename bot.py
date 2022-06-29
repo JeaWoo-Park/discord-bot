@@ -1,15 +1,12 @@
 import discord, asyncio, os
 import random
 from discord.ext import commands
-from datetime import *
 
 game = discord.Game("칼바람")
 bot = commands.Bot(command_prefix='!', status=discord.Status.online, activity=game)
 file = open("champion_list.txt",'r')
 cham = file.read().splitlines()
 file.close()
-
-attenddict = dict()
 
 
 @bot.command()
@@ -87,29 +84,5 @@ async def teamnow(ctx):
     await ctx.send(f"2팀 {team2}")
 
 
-@bot.command(aliases=["ㅊㅊ","출첵","출근"])
-async def 출석(ctx):
-    now = datetime.now()
-    user = ctx.message.author
-    ymd = now.date()
-    hour = now.hour
-    minutes = now.minute
-    attenddict[user] = now
-
-    await ctx.send(f"{user}님 출근 {ymd} {hour}시 {minutes}분")
-
-@bot.command(aliases=["ㅌㅌ","퇴근"])
-async def 튀튀(ctx):
-    now = datetime.now()
-    user = ctx.message.author
-    ymd = now.date()
-    hour = now.hour
-    minutes = now.minute
-
-    duration = now - attenddict[user]
-    
-
-    del attenddict[user]
-    await ctx.send(f"{user}님 퇴근 {ymd} {hour}시 {minutes}분\n {duration}만큼 하셨습니다.")
 access_token = os.environ["BOT_TOKEN"]
 bot.run(access_token)  #봇의 토큰값
